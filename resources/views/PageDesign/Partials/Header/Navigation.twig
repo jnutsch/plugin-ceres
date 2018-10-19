@@ -10,13 +10,13 @@
             <div class="brand-wrapper" {% if showHeaderNavBar == "side" %}style="position: relative"{% endif %}>
                 <a class="navbar-brand pull-lg-left" href="{{ homepageURL }}">
                     {% if ('http' in companyLogo) or ('layout/' in companyLogo) %}
-                        <img alt="{{ companyName }}" src="{{ companyLogo }}" class="img-fluid" crossorigin="anonymous" />
-                        <img alt="WTF" src="https://s3.eu-central-1.amazonaws.com/plentymarkets-public-92/jpx0tvae1136/plugin/1/ceres/images/100x100.png" class="img-fluid" crossorigin="anonymous" />
-                        <img alt="STUHL" src="https://cdn02.plentymarkets.com/jpx0tvae1136/item/images/109/middle/109-Barhocker-White-SanFrancisco.jpg" class="img-fluid" crossorigin="anonymous" />
+                        <img alt="{{ companyName }}" src="{{ companyLogo }}" class="img-fluid" />
+                        <img alt="WTF" src="https://s3.eu-central-1.amazonaws.com/plentymarkets-public-92/jpx0tvae1136/plugin/1/ceres/images/100x100.png" class="img-fluid"/>
+                        <img alt="STUHL" src="https://cdn02.plentymarkets.com/jpx0tvae1136/item/images/109/middle/109-Barhocker-White-SanFrancisco.jpg" class="img-fluid"/>
                     {% else %}
-                        <img alt="{{ companyName }}" src="{{ plugin_path('Ceres') }}/{{ companyLogo }}" class="img-fluid" crossorigin="anonymous" />
-                        <img alt="WTF" src="https://s3.eu-central-1.amazonaws.com/plentymarkets-public-92/jpx0tvae1136/plugin/1/ceres/images/100x100.png" class="img-fluid" crossorigin="anonymous" />
-                        <img alt="STUHL" src="https://cdn02.plentymarkets.com/jpx0tvae1136/item/images/109/middle/109-Barhocker-White-SanFrancisco.jpg" class="img-fluid" crossorigin="anonymous" />
+                        <img alt="{{ companyName }}" src="{{ plugin_path('Ceres') }}/{{ companyLogo }}" class="img-fluid"/>
+                        <img alt="WTF" src="https://s3.eu-central-1.amazonaws.com/plentymarkets-public-92/jpx0tvae1136/plugin/1/ceres/images/100x100.png" class="img-fluid"/>
+                        <img alt="STUHL" src="https://cdn02.plentymarkets.com/jpx0tvae1136/item/images/109/middle/109-Barhocker-White-SanFrancisco.jpg" class="img-fluid"/>
                     {% endif %}
                 </a>
 
