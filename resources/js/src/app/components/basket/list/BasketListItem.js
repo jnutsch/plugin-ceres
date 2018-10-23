@@ -82,7 +82,14 @@ Vue.component("basket-list-item", {
             {
                 price = this.basketItem.variation.data.prices.default.unitPrice.value;
             }
-            return this.basketItem.quantity * (price + this.propertySurchargeSum);
+            let inputWidth = 1;
+
+            inputWidth = this.basketItem.inputWidth > 0 ? this.basketItem.inputWidth : 1;
+            let inputLength = 1;
+
+            inputLength = this.basketItem.inputLength > 0 ? this.basketItem.inputLength : 1;
+
+            return this.basketItem.quantity * inputLength * inputWidth * (price + this.propertySurchargeSum);
         },
         unitPrice()
         {

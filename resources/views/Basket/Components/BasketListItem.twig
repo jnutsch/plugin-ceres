@@ -50,9 +50,21 @@
                                     <span>${ attribute.value.names.name }</span>
                                 </div>
                             </div>
+                            <div class="item-small-prices">
+                                <div v-if="basketItem.inputLength > 0">
+                                    <strong>{{ trans("Ceres::Template.basketItemInputLength") }}:</strong>
+                                    <span>${ basketItem.inputLength } ${ basketItem.unitOfMeasurement }</span>
+                                </div>
+                            </div>
+                            <div class="item-small-prices">
+                                <div v-if="basketItem.inputLength > 0">
+                                    <strong>{{ trans("Ceres::Template.basketItemInputWidth") }}:</strong>
+                                    <span>${ basketItem.inputWidth } ${ basketItem.unitOfMeasurement }</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-    
+
                     <div class="basket-item-container-right">
                         <div class="qty-box-container">
                             <quantity-input
