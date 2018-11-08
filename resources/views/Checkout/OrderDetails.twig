@@ -14,6 +14,8 @@
                 <h5>{{ trans("Ceres::Template.orderConfirmationOrderId") }} {{ orderData.order.id }}</h5>
             </div>
 
+            {{ orderData | json_encode }}
+
             <div class="card-block">
                 <div class="details">
                     <div class="row">
@@ -202,6 +204,8 @@
                                 <strong class="col-xs-6 col-sm-9">{{ (item.quantity * (itemPrice + rebatedAmount)) | formatMonetary( item.amounts[0].currency ) }}</strong>
                             </div>
                             {% if item.orderProperties %}
+
+                            {{ item.orderProperties | json_encode }}
                                 {% for property in item.orderProperties %}
                                     <div class="row">
                                         <strong class="col-xs-6 col-sm-3 item-word-break">{{ property.name }}</strong>
@@ -213,7 +217,7 @@
                                                     {{ splitPath | last }}
                                                 </a>
                                             </span>
-                                        {% else %}
+                                        {% elseif property.type | length > 0 %}
                                             <span class="col-xs-6 col-sm-9 item-word-break">{{ property.value }}</span>
                                         {% endif %}
                                     </div>
