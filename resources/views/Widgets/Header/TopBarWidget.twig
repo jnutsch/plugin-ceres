@@ -12,6 +12,8 @@
 {% set basketValues                 = widget.settings.basketValues.mobile %}
 {% set showItemImages               = widget.settings.showItemImages.mobile %}
 {% set forwardToSingleItem          = widget.settings.forwardToSingleItem.mobile %}
+{% set blogCategoryId               = widget.settings.blogEntrypoint.mobile %}
+
 
 {{ Twig.import("LayoutContainer", "Ceres::PageDesign.Macros.LayoutContainer") }}
 {{ Twig.set("currencyFormat", Twig.call("config", ["Ceres.currency.format"])) }}

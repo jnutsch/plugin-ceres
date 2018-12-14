@@ -137,9 +137,17 @@
                         "value": "both",
                         "caption": "Widget.topBarBasketValuesBoth",
                         "position": 0
-                    }
+                    },
                 ]
             }
-        }
+        },
+        "blogEntrypoint": {
+          "type": "categoryPicker",
+          "required": false,
+          "label": "Config.blogEntrypointCategory",
+            "options": {
+                "name": "Widget.blogEntrypoint"
+            }
+        },
     }
 }
