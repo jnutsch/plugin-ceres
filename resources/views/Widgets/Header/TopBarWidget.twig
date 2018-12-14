@@ -25,9 +25,32 @@
 {{ Twig.set("defaultLanguage", Twig.call("services.webstoreConfig.getDefaultLanguage")) }}
 {{ Twig.set("overrideSearchBar", Twig.call("LayoutContainer.show", ["Ceres::Search.SearchBar"])) }}
 
+
+
+
 <div class="top-bar{% if not isFixed %} unfixed{% endif %}">
     <div class="container-max">
         <div class="row">
+
+            {% if blogCategoryId is not empty %}
+
+              {% set blogCategory = services.category.get(blogCategoryId) %}
+              {% set blogCategoryURL = services.category.getURLById(blogCategoryId) %}
+
+              <ul class="blog-entrypoint controls-list list-inline">
+
+                  {% if services.template.isCurrentTemplate('tpl.category.blog')
+                      or services.template.isCurrentTemplate('tpl.blog.article')
+                      or services.template.isCurrentTemplate('tpl.blog.search') %}
+                      <li class="list-inline-item"><a href="/"><i class="fa fa-angle-left"></i> {{ trans('Blog::Template.backToStore') }}</a></li>
+                  {% else %}
+                      <li class="list-inline-item"><a href="{{ blogCategoryURL }}">{{ blogCategory.details[0].name }}</a></li>
+                  {% endif %}
+              </ul>
+          {% endif %}
+
+
+
             <div class="top-bar-items {% if searchStyle == "permanent" %}search-shown{% endif %}">
                 {% if searchStyle == "permanent" %}
                     {{ Twig.if("overrideSearchBar | trim is empty") }}
