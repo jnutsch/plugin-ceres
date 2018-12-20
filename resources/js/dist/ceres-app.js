@@ -26429,7 +26429,7 @@ function isAddressFieldEnabled(countryId, addressType, field) {
     if (addressType === "1") {
         address = "billing_address";
 
-        if (countryId === 1) {
+        if (parseInt(countryId) === 1) {
             enabledFields = App.config.addresses.billingAddressShow;
         } else {
             enabledFields = App.config.addresses.billingAddressShow_en;
@@ -26437,7 +26437,7 @@ function isAddressFieldEnabled(countryId, addressType, field) {
     } else {
         address = "delivery_address";
 
-        if (countryId === "1") {
+        if (parseInt(countryId) === 1) {
             enabledFields = App.config.addresses.deliveryAddressShow;
         } else {
             enabledFields = App.config.addresses.deliveryAddressShow_en;
