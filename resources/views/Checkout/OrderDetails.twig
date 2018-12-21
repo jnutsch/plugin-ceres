@@ -138,6 +138,8 @@
             {% set rebatedAmountTotalNet = 0 %}
             {% set rebatedAmountTotal = 0 %}
 
+            {{ orderData.order.orderItems | json_encode }}
+
             {% for item in orderData.order.orderItems %}
                 {% if item.itemVariationId > 0 and not ('[-]' in item.orderItemName) %}
                     {% set currentVariationId = item.itemVariationId | trimNewlines %}
@@ -226,7 +228,9 @@
                                                 </a>
                                             </span>
                                         {% else %}
-                                            <span class="col-xs-6 col-sm-9 item-word-break">{{ property.value }}</span>
+                                            {% if property.type and ( property.type | length > 0 ) %}
+                                                <span class="col-xs-6 col-sm-9 item-word-break">{{ property.value }}</span>
+                                            {% endif %}
                                         {% endif %}
                                     </div>
                                 {% endfor %}
