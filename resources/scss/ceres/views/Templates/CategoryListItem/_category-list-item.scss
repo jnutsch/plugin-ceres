@@ -145,13 +145,6 @@
     .thumb-meta{
         margin-top: .5rem;
         text-align:left;
-
-        .vat-porto-info{
-            display: block;
-            white-space: nowrap;
-            margin-top: 5px;
-        }
-
     }
 
     .crossprice{
@@ -171,10 +164,6 @@
     .category-unit-price {
         font-size: .81em;
         color: $gray-light;
-    }
-
-    .thumb-buy{
-        display: block;
     }
 
     .btn-group {
@@ -204,10 +193,6 @@
 
         .mobile-icon-right {
             display: none;
-        }
-
-        .vat-porto-info {
-            white-space: normal !important;
         }
 
         .thumb-image {
@@ -250,16 +235,6 @@
 
         .thumb-background{
             display: block;
-        }
-
-        .thumb-scroll-cmd {
-            flex: 0 0 auto;
-            text-align: center;
-            padding: .4rem;
-        }
-
-        .thumb-btn-buy{
-            min-height: 2rem;
         }
 
         .thumb-content{

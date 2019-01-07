@@ -43,18 +43,6 @@
     	color: $white;
 	}
 
-	.featured-category-cta{
-		display: inline-block;
-		background-color: rgba(white, .9);
-	    padding: .5em;
-	    text-align: right;
-	    width: fit-content;
-	    align-self: flex-start;
-		
-		.fa{
-			margin-left: .5rem;
-		}
-	}
 	&:hover {
 		.featured-category-inner{
 		    background: rgba($secondary, 1);

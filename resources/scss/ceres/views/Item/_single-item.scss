@@ -1,13 +1,5 @@
 
 .single {
-    .list-item-carousel {
-        .list-control-special{
-            width: 5%;
-            height: 5%;
-            position: absolute;
-            top: 40%;
-        }
-    }
 
     #single-carousel {
         background: $white;
@@ -37,9 +29,6 @@
         display: block;
         font-weight: bold;
         line-height: 1;
-    }
-    .input-number {
-        text-align:center;
     }
 
     .vat {
@@ -133,10 +122,6 @@
             background-color: #4d5154;
         }
     }
-}
-
-.rezension {
-    display: inline-block;
 }
 
 .img-thumbnail {

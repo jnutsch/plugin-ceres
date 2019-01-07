@@ -167,12 +167,6 @@
     ul {
         @include reset-list();
         li {
-            &.first-level {
-                display: none;
-            }
-            &.first-level.active {
-                display: list-item;
-            }
             a {
                 display: block;
                 color: $gray-dark;

@@ -154,23 +154,6 @@
 		}
 	}
 
-	.newsletter{
-		
-	}
-
-	.btn-mail {
-	    background-color: $gray;
-	    color: white;
-
-		i {
-	    	padding: 0 1rem;
-		}
-
-		&:hover {
-			background-color: $gray-light;
-		}
-	}
-
 	@include media-breakpoint-up(sm){
 		.footer-services{
 			flex-flow: row nowrap;
