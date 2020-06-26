@@ -15,7 +15,7 @@
     "keywords"          : ["plentymarkets", "plugins", "layout", "template", "ceres"],
     "type"              : "template",
     "require"           : ["IO"],
-    "namespace"         : "Ceres",
+    "namespace"         : "Ceres-FS24",
     "serviceProvider"   : "Ceres\\Providers\\TemplateServiceProvider",
     "javaScriptFiles"   : [],
     "runOnBuild"        : [
